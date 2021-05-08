@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="112" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModule="ToDoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="TaskTableViewCell" customModule="ToDoApp" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ca-ux-MUD">
+                        <rect key="frame" x="293.5" y="10" width="19.5" height="92"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="19.5" id="IK8-Ki-Rrc"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <state key="normal" image="checkmark.square.fill" catalog="system"/>
+                        <state key="selected" image="rectangle" catalog="system"/>
+                        <connections>
+                            <action selector="complete:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i2c-k5-pAF"/>
+                            <action selector="complete:" destination="H2p-sc-9uM" eventType="touchUpInside" id="vxY-uF-oQz"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATl-8n-y5r">
+                        <rect key="frame" x="20" y="10" width="272" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="272" id="u2I-EA-FrW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="3ca-ux-MUD" secondAttribute="bottom" constant="10" id="CVq-ny-UHH"/>
+                    <constraint firstItem="ATl-8n-y5r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Y1k-JR-vTi"/>
+                    <constraint firstItem="ATl-8n-y5r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ZDN-yV-m1W"/>
+                    <constraint firstItem="3ca-ux-MUD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fB2-ZE-NVO"/>
+                    <constraint firstAttribute="trailing" secondItem="3ca-ux-MUD" secondAttribute="trailing" constant="20" id="mJO-EP-Cbh"/>
+                    <constraint firstAttribute="trailing" secondItem="3ca-ux-MUD" secondAttribute="trailing" constant="20" id="oqc-lN-Dsu"/>
+                </constraints>
+                <connections>
+                    <outlet property="taskName" destination="ATl-8n-y5r" id="ARa-ho-nDV"/>
+                    <outlet property="teskComplete" destination="3ca-ux-MUD" id="Rg5-uO-dUr"/>
+                </connections>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="taskName" destination="ATl-8n-y5r" id="RHn-7A-rE7"/>
+                <outlet property="teskComplete" destination="3ca-ux-MUD" id="SmB-BQ-5Wy"/>
+            </connections>
+            <point key="canvasLocation" x="-193.47826086956522" y="-2.0089285714285712"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
+        <image name="rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
